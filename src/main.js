@@ -1,6 +1,29 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+document.getElementById("close-egg").addEventListener("click", () => {
+    const container = document.getElementById("easter-egg-container");
+    container.classList.add("pointer-events-none");
+    
+    // Animación de salida desvaneciéndose
+    gsap.to(container, { opacity: 0, duration: 0.2 });
+});
+
+    const easterEggs = {
+        "7" : {
+            title: "¡El número de la suerte!",
+            gif: "https://i.pinimg.com/originals/fd/cd/d0/fdcdd0b1f725f5a08612cb7ef178d912.gif"
+        },
+        "69" : {
+            title: "¡Hambrient@!",
+            gif:"https://i.pinimg.com/originals/db/ef/7d/dbef7ded446bf28e9f258b1edc7d3399.gif"
+        },
+        "13" : {
+            title:"Aquilas",
+            gif: "https://cdn.memegenerator.es/imagenes/memes/full/32/54/32545209.jpg"
+        }
+
+}
 
 
     const display = document.getElementById('display');
@@ -70,8 +93,13 @@ function inputValue(value) {
     
 
             let res = new Function("return " + expresion)();
-            if(expresion === "69"){
+
+        if (easterEggs[actualOp]) {
+    easterEgg(easterEggs[actualOp]);
+        
+
     }
+    
         
             actualOp = String(res);
             display.textContent = actualOp;
@@ -102,3 +130,24 @@ console.log(actualOp);
 
 
 });
+
+
+function easterEgg(secret){
+    const container= document.getElementById('easter-egg-container');
+    const title = document.getElementById('egg-title');
+    const gif = document.getElementById('egg-gif');
+
+    title.textContent = secret.title;
+    gif.src = secret.gif;
+
+container.classList.remove("pointer-events-none");
+
+gsap.to(container,{opacity: 1, duration: 0.3});
+gsap.fromTo('#easter-egg-container > div' ,{scale : 0.5, rotation: -10},
+    {
+        scale: 1,
+        rotation: 0,
+        duration:0.6 ,ease:"elastic.out(1, 0.5)"
+    }
+)
+}
