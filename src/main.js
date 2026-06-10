@@ -37,7 +37,10 @@ document.getElementById("close-egg").addEventListener("click", () => {
 
     buttons.forEach(button => {
         button.addEventListener('click', (e) => {
+
+
             const value = button.getAttribute('data-val');
+            if(value === null) return;
             const elementbutton= e.currentTarget;
 
             let tl = gsap.timeline();
@@ -94,6 +97,8 @@ function inputValue(value) {
 
             let res = new Function("return " + expresion)();
 
+        actualOp = String(res)
+        
         if (easterEggs[actualOp]) {
     easterEgg(easterEggs[actualOp]);
         
