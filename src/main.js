@@ -5,7 +5,7 @@ document.getElementById("close-egg").addEventListener("click", () => {
     const container = document.getElementById("easter-egg-container");
     container.classList.add("pointer-events-none");
     
-    // Animación de salida desvaneciéndose
+
     gsap.to(container, { opacity: 0, duration: 0.2 });
 });
 
