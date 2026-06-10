@@ -1,31 +1,11 @@
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    useGSAP(() => {
-    gsap.from("button", {
-        duration: 1.5,
-        y: 100,
-        opacity: 0,
-        stagger: {
-            each : 0.05,
-            from: "random"
-        },
-        
-
-    })
-    });
-
 
 
 
     const display = document.getElementById('display');
     const buttons = document.querySelectorAll('button');
+    const title = document.getElementById('title');
 
     let actualOp = "";
     let displayRestart = false;
@@ -36,6 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
             inputValue(value);
         });
     });
+
+    gsap.from(buttons, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'powerinOut',
+        y: 30,
+        stagger: 0.03,
+        immediateRender: true
+    })
+
+    gsap.from(title, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'powerinOut',
+        y: 30,
+        immediateRender: true
+    })
+
 
 function inputValue(value) {
 
@@ -51,8 +49,11 @@ function inputValue(value) {
         try {
             let expresion = actualOp.replace(/x/g, "*").replace(/,/g, ".");
             if (expresion === "") return;
+    
 
             let res = new Function("return " + expresion)();
+            if(expresion === "69"){
+    }
         
             actualOp = String(res);
             display.textContent = actualOp;
@@ -65,7 +66,7 @@ function inputValue(value) {
         return; 
     }
 
-
+console.log(actualOp);
     if (displayRestart) {
         actualOp = "";
         displayRestart = false;
@@ -78,4 +79,8 @@ function inputValue(value) {
     }
     display.textContent = actualOp;
 }
+
+
+
+
 });

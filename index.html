@@ -6,9 +6,9 @@
   <title>Calculadora</title>
   <link rel="stylesheet" href="src/style.css">
 </head>
-<body class="w-full min-h-dvh flex flex-col items-center p-1.5  justify-center bg-linear-to-br from-[#FFD600]  via-[#FF0069] to-[#4F5BD5]">
+<body class="w-full min-h-dvh flex flex-col items-center p-1.5  justify-center bg-gradient-to-br from-slate-500 to-slate-900">
 
-<h1 class="w-full text-center text-6xl font-bold text-white mt-10">
+<h1 id='title' class="w-full text-center text-6xl font-bold font-mono text-white mt-10">
   CALCULADORA DE CAPI
 </h1>
 
@@ -17,26 +17,26 @@
     <span id="display" class="text-4xl font-mono text-black select-none flex">0</span>
   </div>
   <div class="text-6xl w-full h-full grid grid-cols-4 gap-1 place-items-center ">
-    <button data-val="del" class="border cursor-pointer flex pointitems-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">°</button>
-    <button data-val="clear" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">C</button>
-    <button data-val="%" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">%</button>
-    <button data-val="/" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">/</button>
-    <button data-val="7" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">7</button>
-    <button data-val="8" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">8</button>
-    <button data-val="9" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">9</button>
-    <button data-val="*" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">x</button>
-    <button data-val="4" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">4</button>
-    <button data-val="5" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">5</button>
-    <button data-val="6" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">6</button>
-    <button data-val="-" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">-</button>
-    <button data-val="1" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl0">1</button>
-    <button data-val="2" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">2</button>
-    <button data-val="3" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">3</button>
-    <button data-val="+" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">+</button>
-    <button data-val="+/-" class="border cursor-pointer flex items-center justify-center rounded-full text-5xl h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">+/-</button>
-    <button data-val="0" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">0</button>
-    <button data-val="," class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">,</button>
-    <button data-val="=" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl">=</button>
+    <button data-val="del" class="border cursor-pointer flex pointitems-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110 shadow-2xl">°</button>
+    <button data-val="clear" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">C</button>
+    <button data-val="%" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">%</button>
+    <button data-val="/" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110    shadow-2xl">/</button>
+    <button data-val="7" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">7</button>
+    <button data-val="8" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">8</button>
+    <button data-val="9" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">9</button>
+    <button data-val="*" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110    shadow-2xl">x</button>
+    <button data-val="4" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">4</button>
+    <button data-val="5" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">5</button>
+    <button data-val="6" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">6</button>
+    <button data-val="-" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110    shadow-2xl">-</button>
+    <button data-val="1" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl0">1</button>
+    <button data-val="2" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">2</button>
+    <button data-val="3" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">3</button>
+    <button data-val="+" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110    shadow-2xl">+</button>
+    <button data-val="+/-" class="border cursor-pointer flex items-center justify-center rounded-full text-5xl h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">+/-</button>
+    <button data-val="0" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">0</button>
+    <button data-val="," class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-gray-400 hover:scale-110    shadow-2xl">,</button>
+    <button data-val="=" class="border cursor-pointer flex items-center justify-center rounded-full h-22 w-22 bg-orange-400 hover:scale-110   shadow-2xl">=</button>
   </div>
   
 </div>
