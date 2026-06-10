@@ -1,4 +1,29 @@
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    useGSAP(() => {
+    gsap.from("button", {
+        duration: 1.5,
+        y: 100,
+        opacity: 0,
+        stagger: {
+            each : 0.05,
+            from: "random"
+        },
+        
+
+    })
+    });
+
+
+
+
     const display = document.getElementById('display');
     const buttons = document.querySelectorAll('button');
 

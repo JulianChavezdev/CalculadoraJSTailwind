@@ -12,7 +12,9 @@
     "vite": "^8.0.12"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.3.0",
+    "gsap": "^3.15.0",
     "tailwind": "^2.3.1",
     "tailwindcss": "^4.3.0"
   }
