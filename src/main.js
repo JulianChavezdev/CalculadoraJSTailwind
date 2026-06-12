@@ -1,4 +1,4 @@
-
+import { gsap } from 'gsap';
 document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById("close-egg").addEventListener("click", () => {
