@@ -26,6 +26,14 @@ document.getElementById("close-egg").addEventListener("click", () => {
             title:"SIX SEVENNNNNNNN",
             gif: "https://media.tenor.com/6COMq6z3l5oAAAAM/bosnov-67.gif"
         },
+        "1991" : {
+            title: "Felicitaciones, has descifrado la contraseña de los ordenadores de CEI, puedes llevartelos todos como premio",
+            gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWR4bnQ2b3d4b3lnemk3NGZweno4ZWM1dTA3ZW93cXcwc2pycGJkdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lxxOGaDRk4f7R5TkBd/giphy.gif"
+        },
+        "3.14" : {
+            title: "El numero del Kpi SIUUUUUUU",
+            gif: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3J1ZjQ1bnd4NDBzbGl5aHgwMW15eDNpemQ3eWI2cmVrYjdsdjVtNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GCO5WNzFmlc0vjK8cA/giphy.gif"
+        }
         
 
 }
@@ -35,7 +43,7 @@ document.getElementById("close-egg").addEventListener("click", () => {
     const buttons = document.querySelectorAll('button');
     const title = document.getElementById('title');
     const box = document.getElementById('box');
-
+  
 
     let actualOp = "";
     let displayRestart = false;
@@ -101,16 +109,16 @@ function inputValue(value) {
     
 
             let res = new Function("return " + expresion)();
-
-        actualOp = String(res)
-
+            if(!isNaN(res) && String(res).length > 12) {
+                actualOp= res.toExponential(5);
+            } else {
+                actualOp = String(res);
+            }
+        
         if (easterEggs[actualOp]) {
     easterEgg(easterEggs[actualOp]);
-        
 
     }
-    
-        
             actualOp = String(res);
             display.textContent = actualOp;
             displayRestart = true; 
@@ -130,17 +138,17 @@ console.log(actualOp);
 
     if (actualOp === "" && value !== "." && !isNaN(value)) {
         actualOp = value;
-    } else {
+    } else{
+        if(actualOp.length >=12 && !isNaN(value))
+            return;
         actualOp += value;
-    }
+    } 
+    
+
     display.textContent = actualOp;
 }
 
-
-
-
 });
-
 
 function easterEgg(secret){
     const container= document.getElementById('easter-egg-container');
