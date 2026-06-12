@@ -1,23 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
 @import "tailwindcss";
+
+
+@theme {
+    --default-font-family:'Blinker'
+}
 
 
 @layer components {
     .btn {
-    @apply    items-center justify-center rounded-full h-22 w-22 hover:scale-110 shadow-2xl;
+    @apply    items-center justify-center  ;
 }
     .btn-orange{
-        @apply bg-[#FF9500] hover:bg-[#E68600] text-white font-semibold h-22 w-22 p-4 rounded;
+        @apply bg-[#FF9500] hover:bg-[#E68600] text-white font-[Blinker] font-semibold  h-40 w-40 p-4 rounded;
     }
 
     .btn-gray{
-        @apply bg-gray-500 hover:bg-gray-600 text-white font-semibold h-22 w-22 p-4 rounded;
+        @apply bg-gray-500 hover:bg-gray-600 text-white  font-[Blinker] font-semibold  h-40 w-40 p-4 rounded;
     }
 
     .btn-light-gray{
-        @apply bg-gray-400 hover:bg-gray-200 text-white font-semibold h-22 w-22 p-4 rounded;
+        @apply bg-gray-400 hover:bg-gray-200 text-white font-[Blinker] font-semibold h-40 w-40 p-4 rounded;
     }
     .btn-esp{
-@apply  bg-gray-500 h-22 w-22 
+@apply  bg-gray-500  h-40 w-40
 
 }
 }
