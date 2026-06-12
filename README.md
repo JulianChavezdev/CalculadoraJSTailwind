@@ -35,12 +35,7 @@ Despliegue oficial en producción: [**calculadora-js-tailwind.vercel.app**](http
 *   **Hosting:** Vercel
     
 
-📂 Estructura del Proyecto
---------------------------
 
-Plaintext
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ├── index.html          # Estructura del DOM y carga de módulos  ├── vite.config.js      # Configuración del empaquetador Vite  ├── src/  │   ├── main.js         # Lógica de cálculo, control de estado y líneas de tiempo GSAP  │   ├── style.css       # Configuración del tema y abstracción de componentes Tailwind  │   └── assets/         # Recursos estáticos (Imágenes, fondos y logotipos)   `
 
 📦 Instalación y Despliegue Local
 ---------------------------------
