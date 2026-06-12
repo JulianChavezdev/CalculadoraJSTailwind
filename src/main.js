@@ -21,7 +21,12 @@ document.getElementById("close-egg").addEventListener("click", () => {
         "13" : {
             title:"Aquilas",
             gif: "https://cdn.memegenerator.es/imagenes/memes/full/32/54/32545209.jpg"
-        }
+        },
+        "67" : {
+            title:"SIX SEVENNNNNNNN",
+            gif: "https://media.tenor.com/6COMq6z3l5oAAAAM/bosnov-67.gif"
+        },
+        
 
 }
 
@@ -98,7 +103,7 @@ function inputValue(value) {
             let res = new Function("return " + expresion)();
 
         actualOp = String(res)
-        
+
         if (easterEggs[actualOp]) {
     easterEgg(easterEggs[actualOp]);
         
